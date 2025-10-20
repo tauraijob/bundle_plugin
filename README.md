@@ -204,6 +204,6 @@ For support, feature requests, or bug reports:
 This plugin is licensed under the GPL v2 or later.
 
 ## Credits
+
 - Developed by Tau with AI
-- Developed for streamlined WordPress development workflows. Special thanks to the WordPress community for the excellent plugin ecosystem.
-# 
+Developed for streamlined WordPress development workflows. Special thanks to the WordPress community for the excellent plugin ecosystem.
