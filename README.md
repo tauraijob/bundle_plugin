@@ -164,26 +164,6 @@ To enable debug mode and see detailed error messages:
 
 ## Customization
 
-### Adding New Plugins
-
-To add new plugins to the installer, edit the `get_plugin_categories()` method in the main plugin file:
-
-```php
-private function get_plugin_categories() {
-    return array(
-        'Your Category' => array(
-            array(
-                'name' => 'Plugin Name',
-                'slug' => 'plugin-slug',
-                'description' => 'Plugin description'
-            ),
-            // Add more plugins...
-        ),
-        // Add more categories...
-    );
-}
-```
-
 ### Styling Customization
 
 The plugin includes CSS classes that you can override in your theme:
@@ -224,6 +204,6 @@ For support, feature requests, or bug reports:
 This plugin is licensed under the GPL v2 or later.
 
 ## Credits
-
-Developed for streamlined WordPress development workflows. Special thanks to the WordPress community for the excellent plugin ecosystem.
-# bundle_plugin
+- Developed by Tau with AI
+- Developed for streamlined WordPress development workflows. Special thanks to the WordPress community for the excellent plugin ecosystem.
+# 
