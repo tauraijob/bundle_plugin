@@ -1,0 +1,436 @@
+/* WebDev Bundle Plugin Admin Styles */
+
+.webdev-bundle-categories {
+    margin: 20px 0;
+}
+
+.webdev-bundle-category {
+    background: #fff;
+    border: 1px solid #ccd0d4;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, .04);
+}
+
+.webdev-bundle-category h2 {
+    background: #f1f1f1;
+    margin: 0;
+    padding: 15px 20px;
+    border-bottom: 1px solid #ccd0d4;
+    font-size: 16px;
+    font-weight: 600;
+    color: #23282d;
+}
+
+.webdev-bundle-plugins {
+    padding: 20px;
+}
+
+.webdev-bundle-plugin-item {
+    margin-bottom: 15px;
+    padding: 15px;
+    border: 1px solid #e1e1e1;
+    border-radius: 4px;
+    background: #fafafa;
+    transition: all 0.3s ease;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.webdev-bundle-plugin-item:hover {
+    background: #f0f0f0;
+    border-color: #0073aa;
+}
+
+.webdev-bundle-plugin-item .plugin-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.webdev-bundle-plugin-item .plugin-name {
+    font-weight: 600;
+    color: #23282d;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.webdev-bundle-plugin-item .plugin-description {
+    color: #666;
+    font-size: 12px;
+    line-height: 1.4;
+}
+
+.webdev-bundle-plugin-item .plugin-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-width: 200px;
+    justify-content: flex-end;
+}
+
+.webdev-bundle-plugin-item input[type="checkbox"] {
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+.webdev-bundle-plugin-item .plugin-status {
+    padding: 4px 8px;
+    border-radius: 3px;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.webdev-bundle-plugin-item .plugin-status.not-installed {
+    background: #f1f1f1;
+    color: #666;
+    border: 1px solid #ddd;
+}
+
+.webdev-bundle-plugin-item .plugin-status.installed {
+    background: #0073aa;
+    color: #fff;
+}
+
+.webdev-bundle-plugin-item .plugin-status.active {
+    background: #46b450;
+    color: #fff;
+}
+
+.webdev-bundle-plugin-item .plugin-status.installing {
+    background: #ffb900;
+    color: #fff;
+}
+
+.webdev-bundle-plugin-item .plugin-status.activating {
+    background: #ffb900;
+    color: #fff;
+}
+
+.webdev-bundle-plugin-item .plugin-status.error {
+    background: #dc3232;
+    color: #fff;
+}
+
+.webdev-bundle-actions {
+    margin: 30px 0;
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #ccd0d4;
+    border-radius: 4px;
+}
+
+.webdev-bundle-actions .install-section,
+.webdev-bundle-actions .activate-section {
+    margin-bottom: 20px;
+    padding: 15px;
+    background: #f9f9f9;
+    border: 1px solid #e1e1e1;
+    border-radius: 4px;
+}
+
+.webdev-bundle-actions .install-section h3,
+.webdev-bundle-actions .activate-section h3 {
+    margin: 0 0 15px 0;
+    font-size: 16px;
+    color: #23282d;
+}
+
+.webdev-bundle-actions .install-section h3 {
+    color: #0073aa;
+}
+
+.webdev-bundle-actions .activate-section h3 {
+    color: #46b450;
+}
+
+.webdev-bundle-actions .button {
+    margin: 0 5px 5px 0;
+}
+
+.webdev-bundle-actions .button-secondary {
+    background: #46b450;
+    border-color: #46b450;
+    color: #fff;
+}
+
+.webdev-bundle-actions .button-secondary:hover {
+    background: #3a9a3e;
+    border-color: #3a9a3e;
+}
+
+#webdev-bundle-progress {
+    margin-top: 30px;
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #ccd0d4;
+    border-radius: 4px;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 20px;
+    background: #f1f1f1;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 10px 0;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #0073aa, #005177);
+    width: 0%;
+    transition: width 0.3s ease;
+    border-radius: 10px;
+}
+
+#progress-text {
+    font-weight: 600;
+    color: #23282d;
+    margin: 10px 0;
+}
+
+#installation-log {
+    max-height: 200px;
+    overflow-y: auto;
+    background: #f9f9f9;
+    border: 1px solid #e1e1e1;
+    border-radius: 4px;
+    padding: 10px;
+    font-family: monospace;
+    font-size: 12px;
+    line-height: 1.4;
+}
+
+.log-entry {
+    margin-bottom: 5px;
+    padding: 2px 0;
+}
+
+.log-entry.success {
+    color: #46b450;
+}
+
+.log-entry.error {
+    color: #dc3232;
+}
+
+.log-entry.info {
+    color: #0073aa;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .webdev-bundle-plugin-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .webdev-bundle-plugin-item .plugin-actions {
+        min-width: auto;
+        width: 100%;
+        justify-content: flex-start;
+        margin-top: 10px;
+    }
+
+    .webdev-bundle-actions .button {
+        display: block;
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    .webdev-bundle-actions .install-section,
+    .webdev-bundle-actions .activate-section {
+        text-align: center;
+    }
+}
+
+/* Loading Animation */
+.webdev-bundle-loading {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #f3f3f3;
+    border-top: 2px solid #0073aa;
+    border-radius: 50%;
+    animation: webdev-bundle-spin 1s linear infinite;
+    margin-right: 8px;
+}
+
+@keyframes webdev-bundle-spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Success/Error Messages */
+.webdev-bundle-message {
+    padding: 12px 15px;
+    margin: 15px 0;
+    border-radius: 4px;
+    border-left: 4px solid;
+}
+
+.webdev-bundle-message.success {
+    background: #d4edda;
+    border-color: #46b450;
+    color: #155724;
+}
+
+.webdev-bundle-message.error {
+    background: #f8d7da;
+    border-color: #dc3232;
+    color: #721c24;
+}
+
+.webdev-bundle-message.info {
+    background: #d1ecf1;
+    border-color: #0073aa;
+    color: #0c5460;
+}
+
+/* Plugin Manager Styles */
+.webdev-bundle-upload-section {
+    background: #fff;
+    border: 1px solid #ccd0d4;
+    border-radius: 4px;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+.webdev-bundle-upload-section h2 {
+    margin-top: 0;
+    color: #23282d;
+}
+
+.upload-field {
+    margin-bottom: 15px;
+}
+
+.upload-field label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.upload-field input[type="file"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.upload-field .description {
+    font-size: 12px;
+    color: #666;
+    margin-top: 5px;
+}
+
+.upload-progress-bar {
+    width: 100%;
+    height: 20px;
+    background: #f1f1f1;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 10px 0;
+}
+
+.upload-progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #0073aa, #005177);
+    width: 0%;
+    transition: width 0.3s ease;
+    border-radius: 10px;
+}
+
+#upload-status {
+    font-weight: 600;
+    color: #23282d;
+    margin: 10px 0;
+}
+
+.webdev-bundle-uploaded-plugins {
+    background: #fff;
+    border: 1px solid #ccd0d4;
+    border-radius: 4px;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+.uploaded-plugins-list {
+    margin-top: 15px;
+}
+
+.uploaded-plugin-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border: 1px solid #e1e1e1;
+    border-radius: 4px;
+    background: #fafafa;
+    margin-bottom: 10px;
+    transition: all 0.3s ease;
+}
+
+.uploaded-plugin-item:hover {
+    background: #f0f0f0;
+    border-color: #0073aa;
+}
+
+.uploaded-plugin-item .plugin-info h4 {
+    margin: 0 0 5px 0;
+    color: #23282d;
+    font-size: 14px;
+}
+
+.uploaded-plugin-item .plugin-details {
+    margin: 0;
+    font-size: 12px;
+    color: #666;
+}
+
+.uploaded-plugin-item .plugin-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.webdev-bundle-instructions {
+    background: #fff;
+    border: 1px solid #ccd0d4;
+    border-radius: 4px;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+.webdev-bundle-instructions h2 {
+    margin-top: 0;
+    color: #23282d;
+}
+
+.webdev-bundle-instructions ol {
+    margin: 15px 0;
+    padding-left: 20px;
+}
+
+.webdev-bundle-instructions li {
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+
+/* Plugin status indicators for local plugins */
+.webdev-bundle-plugin-item .plugin-status.local {
+    background: #ff6b35;
+    color: #fff;
+}
+
+.webdev-bundle-plugin-item .plugin-status.remote {
+    background: #6c757d;
+    color: #fff;
+}
