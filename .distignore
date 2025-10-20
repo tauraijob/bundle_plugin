@@ -1,0 +1,26 @@
+# Exclude CI and VCS
+.github
+.git
+.gitignore
+.gitattributes
+
+# Node/Composer/etc.
+node_modules
+composer.*
+package*.json
+yarn.lock
+pnpm-lock.yaml
+
+# Dev/docs/misc
+README.md
+assets-wporg
+*.stackdump
+Dockerfile
+docker-compose.*
+tests
+*.zip
+
+# OS/editor
+.DS_Store
+Thumbs.db
+*.log
