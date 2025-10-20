@@ -188,6 +188,14 @@ For support, feature requests, or bug reports:
 2. Review the WordPress error logs
 3. Contact your web developer or hosting provider
 
+## Publishing to WordPress.org
+
+1. Ensure `readme.txt` is up to date (Stable tag, Tested up to)
+2. Add/update assets in `.wordpress-org/` (icons/banners/screenshots)
+3. Bump version in `webdev-bundle-plugin.php`
+4. Create a Git tag like `v1.1.0` and push it to GitHub
+5. The GitHub Action will deploy to the WordPress.org plugin directory
+
 ## Changelog
 
 ### Version 1.0.0

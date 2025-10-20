@@ -1,0 +1,10 @@
+# Exclude dev/CI/docs from git archive exports (for clean plugin ZIP)
+/.git export-ignore
+/.github export-ignore
+/.wordpress-org export-ignore
+/assets-wporg export-ignore
+/tests export-ignore
+/.distignore export-ignore
+/README.md export-ignore
+/.gitignore export-ignore
+/.gitattributes export-ignore
