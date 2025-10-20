@@ -1,7 +1,6 @@
 <?php
 /**
  * Plugin Name: WebDev Bundle
- * Plugin URI: https://webdev.co.zw
  * Description: A comprehensive plugin installer that provides easy installation of essential WordPress plugins for web development projects.
  * Version: 1.1.0
  * Author: Tau
