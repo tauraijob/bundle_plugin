@@ -224,6 +224,5 @@ For support, feature requests, or bug reports:
 This plugin is licensed under the GPL v2 or later.
 
 ## Credits
-
+- Tau
 Developed for streamlined WordPress development workflows. Special thanks to the WordPress community for the excellent plugin ecosystem.
-# bundle_plugin
