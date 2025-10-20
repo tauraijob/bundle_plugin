@@ -8,7 +8,6 @@
  * License: GPL v2 or later
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain: webdev-bundle
- * Domain Path: /languages
  */
 
 // Prevent direct access
@@ -30,9 +29,6 @@ class WebDevBundlePlugin {
     }
     
     public function init() {
-        // Load text domain
-        load_plugin_textdomain('webdev-bundle', false, dirname(plugin_basename(__FILE__)) . '/languages');
-        
         // Add admin hooks
         if (is_admin()) {
             add_action('admin_menu', array($this, 'add_admin_menu'));
@@ -624,33 +620,26 @@ class WebDevBundlePlugin {
         // Debug: Log file details
         error_log('WebDev Bundle Upload Debug - File: ' . $file['name'] . ', Size: ' . $file['size'] . ', Temp: ' . $file['tmp_name'] . ', Destination: ' . $destination);
         
-        // Move uploaded file
-        if (move_uploaded_file($file['tmp_name'], $destination)) {
-            // Set proper permissions
-            chmod($destination, 0644);
-            
-            wp_send_json_success(array(
-                'message' => sprintf(__('Plugin "%s" uploaded successfully.', 'webdev-bundle'), $filename),
-                'filename' => $filename
-            ));
+        // Move uploaded file using WordPress file handling
+        if (!function_exists('wp_handle_upload')) {
+            require_once(ABSPATH . 'wp-admin/includes/file.php');
+        }
+        
+        $upload_overrides = array('test_form' => false);
+        $uploaded_file = wp_handle_upload($file, $upload_overrides);
+        
+        if ($uploaded_file && !isset($uploaded_file['error'])) {
+            // Move to our custom directory
+            if (rename($uploaded_file['file'], $destination)) {
+                wp_send_json_success(array(
+                    'message' => sprintf(__('Plugin "%s" uploaded successfully.', 'webdev-bundle'), $filename),
+                    'filename' => $filename
+                ));
+            } else {
+                wp_send_json_error(array('message' => __('Failed to move uploaded file to destination.', 'webdev-bundle')));
+            }
         } else {
-            // Get more detailed error information
-            $error_details = array();
-            if (!is_uploaded_file($file['tmp_name'])) {
-                $error_details[] = 'File is not a valid uploaded file';
-            }
-            if (!is_writable($upload_dir)) {
-                $error_details[] = 'Destination directory is not writable';
-            }
-            if (file_exists($destination)) {
-                $error_details[] = 'Destination file already exists';
-            }
-            
-            $error_message = __('Failed to upload plugin file.', 'webdev-bundle');
-            if (!empty($error_details)) {
-                $error_message .= ' Details: ' . implode(', ', $error_details);
-            }
-            
+            $error_message = isset($uploaded_file['error']) ? $uploaded_file['error'] : __('Failed to upload plugin file.', 'webdev-bundle');
             wp_send_json_error(array('message' => $error_message));
         }
     }
