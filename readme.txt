@@ -1,5 +1,5 @@
 === WebDev Bundle Plugin ===
-Contributors: tau
+Contributors: Taurai Munodawafa
 Tags: installer, bulk install, plugins, onboarding, setup, productivity
 Requires at least: 5.0
 Tested up to: 6.6
