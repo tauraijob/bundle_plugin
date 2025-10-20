@@ -141,7 +141,7 @@ jQuery(document).ready(function ($) {
             }
 
             var plugin = plugins[currentPlugin];
-            var pluginItem = $('.webdev-bundle-plugin-item[data-plugin-slug="' + plugin.slug + '"]');
+            var pluginItem = $('.webdev-bundle-item[data-plugin-slug="' + plugin.slug + '"]');
             var pluginStatus = pluginItem.find('.plugin-status');
             var pluginCheckbox = pluginItem.find('.install-checkbox');
 
@@ -264,7 +264,7 @@ jQuery(document).ready(function ($) {
             }
 
             var plugin = plugins[currentPlugin];
-            var pluginItem = $('.webdev-bundle-plugin-item[data-plugin-slug="' + plugin.slug + '"]');
+            var pluginItem = $('.webdev-bundle-item[data-plugin-slug="' + plugin.slug + '"]');
             var pluginStatus = pluginItem.find('.plugin-status');
             var pluginCheckbox = pluginItem.find('.activate-checkbox');
 
@@ -398,7 +398,7 @@ jQuery(document).ready(function ($) {
     });
 
     // Add visual feedback for form interactions
-    $('.webdev-bundle-plugin-item').on('mouseenter', function () {
+    $('.webdev-bundle-item').on('mouseenter', function () {
         $(this).addClass('hover');
     }).on('mouseleave', function () {
         $(this).removeClass('hover');
@@ -412,15 +412,15 @@ jQuery(document).ready(function ($) {
 
     // Add accessibility improvements
     $('input[type="checkbox"]').on('focus', function () {
-        $(this).closest('.webdev-bundle-plugin-item').addClass('focused');
+        $(this).closest('.webdev-bundle-item').addClass('focused');
     }).on('blur', function () {
-        $(this).closest('.webdev-bundle-plugin-item').removeClass('focused');
+        $(this).closest('.webdev-bundle-item').removeClass('focused');
     });
 
     // Add ARIA labels for screen readers
-    $('.webdev-bundle-plugin-item').attr('role', 'listitem');
+    $('.webdev-bundle-item').attr('role', 'listitem');
     $('input[type="checkbox"]').attr('aria-describedby', function () {
-        return $(this).closest('.webdev-bundle-plugin-item').find('.plugin-description').attr('id') ||
+        return $(this).closest('.webdev-bundle-item').find('.plugin-description').attr('id') ||
             'plugin-' + $(this).val() + '-description';
     });
 

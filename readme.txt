@@ -1,4 +1,4 @@
-=== WebDev Bundle Plugin ===
+=== WebDev Bundle ===
 Contributors: Taurai Munodawafa
 Tags: installer, bulk install, plugins, onboarding, setup, productivity
 Requires at least: 5.0
@@ -11,7 +11,7 @@ License URI: https://www.gnu.org/licenses/gpl-2.0.html
 A comprehensive WordPress plugin installer that streamlines setting up essential plugins for new projects in just a few clicks.
 
 == Description ==
-WebDev Bundle Plugin provides a fast, two-step workflow to install and activate a curated set of essential plugins. It supports local plugin ZIPs, real-time progress, bulk operations, and a clean, responsive admin UI.
+WebDev Bundle provides a fast, two-step workflow to install and activate a curated set of essential plugins. It supports local plugin ZIPs, real-time progress, bulk operations, and a clean, responsive admin UI.
 
 === Key Features ===
 - Two-step process: install then activate

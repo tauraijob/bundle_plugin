@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name: WebDev Bundle Plugin
+ * Plugin Name: WebDev Bundle
  * Plugin URI: https://webdev.co.zw
  * Description: A comprehensive plugin installer that provides easy installation of essential WordPress plugins for web development projects.
  * Version: 1.1.0
@@ -87,7 +87,7 @@ class WebDevBundlePlugin {
     
     private function create_upload_directory() {
         $upload_dir = wp_upload_dir();
-        $plugin_dir = $upload_dir['basedir'] . '/webdev-bundle-plugins';
+        $plugin_dir = $upload_dir['basedir'] . '/webdev-bundles';
         
         // Debug: Log upload directory info
         error_log('WebDev Bundle Upload Debug - Upload dir: ' . $upload_dir['basedir']);
@@ -119,7 +119,7 @@ class WebDevBundlePlugin {
     
     private function get_upload_directory() {
         $upload_dir = wp_upload_dir();
-        return $upload_dir['basedir'] . '/webdev-bundle-plugins';
+        return $upload_dir['basedir'] . '/webdev-bundles';
     }
     
     private function get_uploaded_plugins() {
@@ -150,7 +150,7 @@ class WebDevBundlePlugin {
             ?>
             <div class="notice notice-success is-dismissible">
                 <p>
-                    <strong><?php _e('WebDev Bundle Plugin Activated!', 'webdev-bundle'); ?></strong>
+                    <strong><?php _e('WebDev Bundle Activated!', 'webdev-bundle'); ?></strong>
                     <?php _e('Your website needs essential plugins for optimal performance. ', 'webdev-bundle'); ?>
                     <a href="<?php echo admin_url('admin.php?page=webdev-bundle'); ?>" class="button button-primary">
                         <?php _e('Install Required Plugins', 'webdev-bundle'); ?>
@@ -217,9 +217,9 @@ class WebDevBundlePlugin {
                     <?php foreach ($plugin_categories as $category => $plugins): ?>
                         <div class="webdev-bundle-category">
                             <h2><?php echo esc_html($category); ?></h2>
-                            <div class="webdev-bundle-plugins">
+                            <div class="webdev-bundles">
                                  <?php foreach ($plugins as $plugin): ?>
-                                     <div class="webdev-bundle-plugin-item" data-plugin-slug="<?php echo esc_attr($plugin['slug']); ?>">
+                                     <div class="webdev-bundle-item" data-plugin-slug="<?php echo esc_attr($plugin['slug']); ?>">
                                          <div class="plugin-info">
                                              <span class="plugin-name"><?php echo esc_html($plugin['name']); ?></span>
                                              <span class="plugin-description"><?php echo esc_html($plugin['description']); ?></span>
@@ -681,7 +681,7 @@ class WebDevBundlePlugin {
         }
         
         $upload_dir = wp_upload_dir();
-        $plugin_dir = $upload_dir['basedir'] . '/webdev-bundle-plugins';
+        $plugin_dir = $upload_dir['basedir'] . '/webdev-bundles';
         
         $debug_info = array(
             'upload_dir' => $upload_dir['basedir'],

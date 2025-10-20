@@ -1,4 +1,4 @@
-/* WebDev Bundle Plugin Admin Styles */
+/* WebDev Bundle Admin Styles */
 
 .webdev-bundle-categories {
     margin: 20px 0;
@@ -22,11 +22,11 @@
     color: #23282d;
 }
 
-.webdev-bundle-plugins {
+.webdev-bundles {
     padding: 20px;
 }
 
-.webdev-bundle-plugin-item {
+.webdev-bundle-item {
     margin-bottom: 15px;
     padding: 15px;
     border: 1px solid #e1e1e1;
@@ -38,31 +38,31 @@
     align-items: center;
 }
 
-.webdev-bundle-plugin-item:hover {
+.webdev-bundle-item:hover {
     background: #f0f0f0;
     border-color: #0073aa;
 }
 
-.webdev-bundle-plugin-item .plugin-info {
+.webdev-bundle-item .plugin-info {
     flex: 1;
     display: flex;
     flex-direction: column;
 }
 
-.webdev-bundle-plugin-item .plugin-name {
+.webdev-bundle-item .plugin-name {
     font-weight: 600;
     color: #23282d;
     margin-bottom: 5px;
     font-size: 14px;
 }
 
-.webdev-bundle-plugin-item .plugin-description {
+.webdev-bundle-item .plugin-description {
     color: #666;
     font-size: 12px;
     line-height: 1.4;
 }
 
-.webdev-bundle-plugin-item .plugin-actions {
+.webdev-bundle-item .plugin-actions {
     display: flex;
     align-items: center;
     gap: 10px;
@@ -70,12 +70,12 @@
     justify-content: flex-end;
 }
 
-.webdev-bundle-plugin-item input[type="checkbox"] {
+.webdev-bundle-item input[type="checkbox"] {
     transform: scale(1.2);
     cursor: pointer;
 }
 
-.webdev-bundle-plugin-item .plugin-status {
+.webdev-bundle-item .plugin-status {
     padding: 4px 8px;
     border-radius: 3px;
     font-size: 11px;
@@ -83,33 +83,33 @@
     text-transform: uppercase;
 }
 
-.webdev-bundle-plugin-item .plugin-status.not-installed {
+.webdev-bundle-item .plugin-status.not-installed {
     background: #f1f1f1;
     color: #666;
     border: 1px solid #ddd;
 }
 
-.webdev-bundle-plugin-item .plugin-status.installed {
+.webdev-bundle-item .plugin-status.installed {
     background: #0073aa;
     color: #fff;
 }
 
-.webdev-bundle-plugin-item .plugin-status.active {
+.webdev-bundle-item .plugin-status.active {
     background: #46b450;
     color: #fff;
 }
 
-.webdev-bundle-plugin-item .plugin-status.installing {
+.webdev-bundle-item .plugin-status.installing {
     background: #ffb900;
     color: #fff;
 }
 
-.webdev-bundle-plugin-item .plugin-status.activating {
+.webdev-bundle-item .plugin-status.activating {
     background: #ffb900;
     color: #fff;
 }
 
-.webdev-bundle-plugin-item .plugin-status.error {
+.webdev-bundle-item .plugin-status.error {
     background: #dc3232;
     color: #fff;
 }
@@ -223,12 +223,12 @@
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .webdev-bundle-plugin-item {
+    .webdev-bundle-item {
         flex-direction: column;
         align-items: flex-start;
     }
 
-    .webdev-bundle-plugin-item .plugin-actions {
+    .webdev-bundle-item .plugin-actions {
         min-width: auto;
         width: 100%;
         justify-content: flex-start;
@@ -425,12 +425,12 @@
 }
 
 /* Plugin status indicators for local plugins */
-.webdev-bundle-plugin-item .plugin-status.local {
+.webdev-bundle-item .plugin-status.local {
     background: #ff6b35;
     color: #fff;
 }
 
-.webdev-bundle-plugin-item .plugin-status.remote {
+.webdev-bundle-item .plugin-status.remote {
     background: #6c757d;
     color: #fff;
 }

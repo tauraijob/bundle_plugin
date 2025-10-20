@@ -1,6 +1,6 @@
 <?php
 /**
- * Installation script for WebDev Bundle Plugin
+ * Installation script for WebDev Bundle
  * This file can be used to create a zip package for easy distribution
  */
 
@@ -8,22 +8,22 @@
 if (!defined('ABSPATH')) {
     // If not in WordPress context, create a simple zip package
     if (php_sapi_name() === 'cli') {
-        echo "Creating WebDev Bundle Plugin package...\n";
+        echo "Creating WebDev Bundle package...\n";
         
         $files = [
-            'webdev-bundle-plugin.php',
+            'webdev-bundle.php',
             'assets/admin.css',
             'assets/admin.js',
             'README.md'
         ];
         
         $zip = new ZipArchive();
-        $zipFile = 'webdev-bundle-plugin-v1.1.0.zip';
+        $zipFile = 'webdev-bundle-v1.1.0.zip';
         
         if ($zip->open($zipFile, ZipArchive::CREATE) === TRUE) {
             foreach ($files as $file) {
                 if (file_exists($file)) {
-                    $zip->addFile($file, 'webdev-bundle-plugin/' . $file);
+                    $zip->addFile($file, 'webdev-bundle/' . $file);
                     echo "Added: $file\n";
                 } else {
                     echo "Warning: $file not found\n";
@@ -32,7 +32,7 @@ if (!defined('ABSPATH')) {
             
             // Add instructions for local plugins
             $instructions = "LOCAL_PLUGINS_INSTRUCTIONS.txt";
-            $content = "WebDev Bundle Plugin - Local Plugins Instructions\n";
+            $content = "WebDev Bundle - Local Plugins Instructions\n";
             $content .= "================================================\n\n";
             $content .= "To include local plugins in your distribution:\n\n";
             $content .= "1. Create a 'local-plugins' folder in the plugin directory\n";
@@ -40,8 +40,8 @@ if (!defined('ABSPATH')) {
             $content .= "3. Name the files to match plugin slugs (e.g., 'elementor-pro.zip')\n";
             $content .= "4. The plugin will automatically use local files when available\n\n";
             $content .= "Example structure:\n";
-            $content .= "webdev-bundle-plugin/\n";
-            $content .= "├── webdev-bundle-plugin.php\n";
+            $content .= "webdev-bundle/\n";
+            $content .= "├── webdev-bundle.php\n";
             $content .= "├── assets/\n";
             $content .= "├── local-plugins/\n";
             $content .= "│   ├── elementor-pro.zip\n";

@@ -1,4 +1,4 @@
-# WebDev Bundle Plugin
+# WebDev Bundle
 
 A comprehensive WordPress plugin installer that provides easy installation of essential WordPress plugins for web development projects. This plugin streamlines the process of setting up a WordPress website with all the necessary plugins in just a few clicks.
 
@@ -42,12 +42,12 @@ A comprehensive WordPress plugin installer that provides easy installation of es
 
 1. **Upload the Plugin**:
    - Download the plugin files
-   - Upload the `webdev-bundle-plugin` folder to your `/wp-content/plugins/` directory
+   - Upload the `webdev-bundle` folder to your `/wp-content/plugins/` directory
    - Or install via WordPress admin: Plugins → Add New → Upload Plugin
 
 2. **Activate the Plugin**:
    - Go to Plugins → Installed Plugins
-   - Find "WebDev Bundle Plugin" and click "Activate"
+   - Find "WebDev Bundle" and click "Activate"
 
 3. **Install Required Plugins**:
    - After activation, you'll see a notice prompting you to install required plugins
@@ -169,7 +169,7 @@ To enable debug mode and see detailed error messages:
 The plugin includes CSS classes that you can override in your theme:
 
 - `.webdev-bundle-category` - Category containers
-- `.webdev-bundle-plugin-item` - Individual plugin items
+- `.webdev-bundle-item` - Individual plugin items
 - `.webdev-bundle-actions` - Action buttons container
 - `.progress-bar` - Installation progress bar
 
@@ -192,7 +192,7 @@ For support, feature requests, or bug reports:
 
 1. Ensure `readme.txt` is up to date (Stable tag, Tested up to)
 2. Add/update assets in `.wordpress-org/` (icons/banners/screenshots)
-3. Bump version in `webdev-bundle-plugin.php`
+3. Bump version in `webdev-bundle.php`
 4. Create a Git tag like `v1.1.0` and push it to GitHub
 5. The GitHub Action will deploy to the WordPress.org plugin directory
 
